@@ -2,7 +2,12 @@
 
 Useful for presenting snippets and simple widgets.
 
-## [View on GitPage](https://chrisnajman.github.io/simple-template)
+## Optional Features
+
+- **Loading animation**,
+- **Responsive menu**.
+
+[View on GitPage](https://chrisnajman.github.io/simple-template)
 
 ## JavaScript
 
