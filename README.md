@@ -2,10 +2,11 @@
 
 Useful for presenting snippets and simple widgets.
 
-## Optional Features
+## Features
 
-- **Loading animation**,
-- **Responsive menu**.
+- Loading animation,
+- responsive menu,
+- theme switcher.
 
 [View on GitPage](https://chrisnajman.github.io/simple-template)
 
@@ -16,6 +17,8 @@ Built with **vanilla ES6 JavaScript**, focusing on modern syntax and browser API
 The JavaScript has been split into separate modules, improving code modularity:
 
 - `module-placeholder.js`: Empty module, imported into `index.js`.
+- `primary-navigation.js`: See [Accessibile Mobile Menu Git repository](https://github.com/chrisnajman/accessible-mobile-menu)
+- `loader.js`: See [Loader Git repository](https://github.com/chrisnajman/loader)
 - `theme.js`: Handles theme toggling (light/dark mode) and local storage management.
 
 ---
