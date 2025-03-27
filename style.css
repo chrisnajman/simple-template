@@ -211,6 +211,7 @@ code {
 
         width: 1.5625rem;
         height: 0.8125rem;
+        border: 0;
         border-radius: var(--border-radius);
         display: flex;
         justify-content: flex-start;
