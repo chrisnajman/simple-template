@@ -207,7 +207,7 @@ code {
     & button {
         font-size: clamp(0.875rem, 0.8248rem + 0.2336vw, 1rem);
         font-family: inherit;
-        background-color: #0075ff;
+        background-color: var(--link-blue);
 
         width: 1.5625rem;
         height: 0.8125rem;
