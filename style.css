@@ -202,6 +202,7 @@ code {
     gap: 0.625rem;
     padding: 0.3125rem 0.625rem;
     margin-block-start: 0;
+    border: 0;
 
     & button {
         font-size: clamp(0.875rem, 0.8248rem + 0.2336vw, 1rem);
