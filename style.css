@@ -7,7 +7,7 @@
 
 :root {
     overflow-y: scroll;
-
+    color-scheme: light dark;
     --border-radius: 1.25rem;
 
     /* light mode (default) */
