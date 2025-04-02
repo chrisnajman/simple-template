@@ -30,7 +30,7 @@
 }
 
 body {
-    font-size: clamp(1rem, 0.8995rem + 0.4673vw, 1.25rem);
+    font-size: clamp(1.156rem, 1.1182rem + 0.1757vw, 1.25rem);
     font-family: system-ui, sans-serif;
     background-color: var(--body-bg);
     color: var(--body-fg);
@@ -66,14 +66,14 @@ img {
 
 p {
     max-width: 30ch;
+    text-wrap: pretty;
 }
 
 .h1,
 h1,
 h2,
-h3,
-p {
-    text-wrap: pretty;
+h3 {
+    text-wrap: balance;
 }
 
 .h1,
@@ -86,8 +86,16 @@ h3 {
 h1,
 h2,
 h3 {
-    font-size: clamp(1.25rem, 1.1495rem + 0.4673vw, 1.5rem);
     text-align: center;
+}
+
+h1,
+h2 {
+    font-size: clamp(1.25rem, 1.1495rem + 0.4673vw, 1.5rem);
+}
+
+h3 {
+    font-size: clamp(1.156rem, 1.1182rem + 0.1757vw, 1.25rem);
 }
 
 button,
