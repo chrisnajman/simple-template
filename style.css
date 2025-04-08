@@ -56,6 +56,10 @@ body {
         height: 3.125rem;
         fill: var(--body-fg);
     }
+
+    & span {
+        text-align: center;
+    }
 }
 
 img {
