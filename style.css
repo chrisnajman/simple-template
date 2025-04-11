@@ -8,6 +8,8 @@
 :root {
     overflow-y: scroll;
     color-scheme: light dark;
+    --animation-timing: 250ms;
+    --bold: 600;
     --border-radius: 1.25rem;
 
     /* light mode (default) */
@@ -319,10 +321,6 @@ code {
 }
 
 /* Primary Navigation */
-:root {
-    --animation-timing: 250ms;
-}
-
 .primary-navigation {
     position: relative;
     & nav {
@@ -393,6 +391,10 @@ code {
 
         &[aria-current="page"] {
             pointer-events: none;
+
+            @media screen and (width <= 60.625rem) {
+                font-weight: var(--bold);
+            }
         }
     }
 

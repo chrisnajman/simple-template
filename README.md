@@ -17,7 +17,7 @@ Built with **vanilla ES6 JavaScript**, focusing on modern syntax and browser API
 The JavaScript has been split into separate modules, improving code modularity:
 
 - `module-placeholder.js`: Empty module, imported into `index.js`.
-- `primary-navigation.js`: See [Accessibile Mobile Menu Git repository](https://github.com/chrisnajman/accessible-mobile-menu)
+- `primary-navigation.js` and `hamburger-button.js`: See [Accessible Mobile Menu Git repository](https://github.com/chrisnajman/accessible-mobile-menu)
 - `loader.js`: See [Loader Git repository](https://github.com/chrisnajman/loader)
 - `theme.js`: Handles theme toggling (light/dark mode) and local storage management.
 
