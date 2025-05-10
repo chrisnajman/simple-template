@@ -164,6 +164,16 @@ code {
     padding: 1rem;
 }
 
+.external-link {
+    color: var(--link-blue);
+    text-underline-offset: 0.5em;
+
+    &::after {
+        color: var(--link-blue);
+        content: " \27F6";
+    }
+}
+
 .header,
 .footer,
 .element {
@@ -181,17 +191,6 @@ code {
     gap: 1rem;
     padding-block: 3rem;
     margin-block-start: 0;
-}
-.footer {
-    & a {
-        color: var(--link-blue);
-        text-underline-offset: 0.5em;
-
-        &::after {
-            color: var(--link-blue);
-            content: " \27F6";
-        }
-    }
 }
 
 .main {
