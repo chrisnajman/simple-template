@@ -16,14 +16,14 @@
     --body-bg: #ccc;
     --body-fg: #000;
     --el-bg: #fff;
-    --link-blue: blue;
+    --accent-colour: blue;
 }
 
 .darkmode {
     --body-bg: #333;
     --body-fg: #fff;
     --el-bg: #000;
-    --link-blue: aqua;
+    --accent-colour: aqua;
 }
 
 :focus-visible {
@@ -168,11 +168,11 @@ code {
 }
 
 .external-link {
-    color: var(--link-blue);
+    color: var(--accent-colour);
     text-underline-offset: 0.5em;
 
     &::after {
-        color: var(--link-blue);
+        color: var(--accent-colour);
         content: " \27F6";
     }
 }
@@ -223,7 +223,7 @@ code {
     & button {
         font-size: clamp(0.875rem, 0.8248rem + 0.2336vw, 1rem);
         font-family: inherit;
-        background-color: var(--link-blue);
+        background-color: var(--accent-colour);
 
         width: 1.5625rem;
         height: 0.8125rem;
@@ -369,7 +369,7 @@ code {
         }
     }
     & a {
-        color: var(--link-blue);
+        color: var(--accent-colour);
         border-block-end: 0.3125rem solid transparent;
         padding-block-end: 0.3125rem;
         margin-block-end: 0.625rem;
