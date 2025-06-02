@@ -11,6 +11,7 @@
     --animation-timing: 250ms;
     --bold: 600;
     --border-radius: 1.25rem;
+    --trim: trim-both cap alphabetic;
 
     /* light mode (default) */
     --body-bg: #ccc;
@@ -51,7 +52,7 @@ body {
     font-size: clamp(1.75rem, 1.4486rem + 1.4019vw, 2.5rem);
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25rem;
+    gap: 0.5rem;
     margin-inline: auto;
     align-items: center;
     justify-content: center;
@@ -64,6 +65,7 @@ body {
 
     & span {
         text-align: center;
+        text-box: var(--trim);
     }
 }
 
