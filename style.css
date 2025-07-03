@@ -249,29 +249,12 @@ code {
         font-size: 0.875rem;
         font-weight: 600;
         color: var(--body-fg);
-        &.light {
-            opacity: 1;
-        }
-
-        &.dark {
-            opacity: 0.5;
-        }
     }
 }
 
 .darkmode {
     & .theme-toggler button {
         justify-content: flex-end;
-    }
-
-    & p {
-        &.light {
-            opacity: 0.5;
-        }
-
-        &.dark {
-            opacity: 1;
-        }
     }
 }
 /* End theme */
