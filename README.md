@@ -65,80 +65,50 @@ The layout and functionality have been verified in both browser and device simul
 
 ---
 
-## Build and Deployment Notes
+## Build & Deployment Setup for `/docs` Folder
 
-The following assumes you have `node` installed on your machine.
+If you want to deploy a minified version of this project to **GitHub Pages**, read on.
 
-### Installing Dependencies
+### 1. Install Required Packages
 
-Before running the build commands, install the required packages (`esbuild postcss postcss-nesting postcss-cli cssnano`) as dev dependencies:
+Run this once in your project root to install dev dependencies:
 
 ```bash
-npm i
+npm install
 ```
 
-### Why `/docs`?
-
-- The `/docs` folder contains optimized production-ready assets, including:
-  - `bundle.js`: the JavaScript bundled into a single file (no modules)
-  - `style.min.css`: the CSS processed with nesting flattened and minified
-- The original source files (`index.js`, files in `js-modules/`, `style.css` with nesting, etc.) remain in the project root for easier development and editing.
-- GitHub Pages is configured to serve the site from the `/docs` folder instead of the root, so your published site uses these optimized files.
+### 2. Run the full build process
 
 > [!IMPORTANT]
-> If you're publishing on GitHub Pages, make sure the Pages setting is configured to serve from the `/docs` folder on the `main` branch.
+> Any assets not described in `package.json` must be added. In the current project we don't have an `img` folder. If you create one and add images to it, you have to add this to `copy:assets`, e.g.
 
-### The `postcss.config.js` file
+#### Current `package.json`
 
-- Located in the project root, this configuration file instructs PostCSS how to process your CSS:
-  - It enables CSS nesting support with `postcss-nesting`.
-  - It minifies the final CSS using `cssnano`.
-- This file is automatically used during the **build** process when PostCSS runs.
-
-### Build Script
-
-> [!IMPORTANT]
-> Before running the build script:
-
-- Make sure you have _manually_ **copied** all files (images, favicons, etc ) that are used in the site from the project root to `/docs`.
-- Make sure you have _manually_ **copied** all HTML files from the project root to `/docs` (excluding e.g. `README.md`, `LICENSE` and `.gitignore`).
-- Ensure that the `script` and `link rel="stylesheet"` tags in the updated HTML files in `/docs` are coded as:
-
-```html
-<script
-  src="./bundle.js"
-  defer
-></script>
-<link
-  rel="stylesheet"
-  href="./style.min.css"
-/>
+```
+"copy:assets": "shx cp -r  site.webmanifest favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png android-chrome-192x192.png android-chrome-512x512.png docs/",
 ```
 
-... instead of the code in the HTML found in the project root:
+#### Updated `package.json` with "img"
 
-```html
-<script
-  src="./index.js"
-  type="module"
-></script>
-<link
-  rel="stylesheet"
-  href="./style.css"
-/>
+```
+"copy:assets": "shx cp -r  img site.webmanifest favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png android-chrome-192x192.png android-chrome-512x512.png docs/",
 ```
 
-#### Run the Build Script
+etc, etc.
 
-To update the built assets in `/docs` after editing source files, run:
+Then in the terminal, run:
 
 ```bash
 npm run build
 ```
 
-This runs the following tasks:
+### 3. Deploy to GitHub Pages
 
-- Bundles and minifies JavaScript using `esbuild`.
-- Processes and minifies CSS using `postcss`.
+Once you've created a repository and pushed the files,
 
----
+- go to `https://github.com/[your-name]/[your-project-name]/settings/pages`.
+- Under "Build and deployment > Branch" make sure you set the branch to `main` and folder to `/docs`.
+- Click "Save".
+
+> [!NOTE]
+> For a detailed description of the build process, configuration files and npm packages see my [GitHub Pages Optimised Build](https://github.com/chrisnajman/github-pages-optimised-build).
