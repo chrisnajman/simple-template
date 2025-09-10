@@ -321,7 +321,9 @@ code {
                 margin-inline: auto;
                 display: grid;
                 grid-template-rows: 0fr;
-                transition: grid-template-rows var(--animation-timing) ease-in;
+                @media (prefers-reduced-motion: no-preference) {
+                    transition: grid-template-rows var(--animation-timing) ease-in;
+                }
 
                 & > ul {
                     overflow: hidden;
@@ -425,18 +427,22 @@ code {
             width: 80%;
             height: 0.625rem;
             fill: var(--body-fg);
-            transition:
-                y var(--animation-timing) ease-in var(--animation-timing),
-                rotate var(--animation-timing) ease-in,
-                opacity 0ms var(--animation-timing);
+            @media (prefers-reduced-motion: no-preference) {
+                transition:
+                    y var(--animation-timing) ease-in var(--animation-timing),
+                    rotate var(--animation-timing) ease-in,
+                    opacity 0ms var(--animation-timing);
+            }
             transform-origin: center;
         }
 
         &[aria-expanded="true"] .line {
-            transition:
-                y var(--animation-timing) ease-in,
-                rotate var(--animation-timing) ease-in var(--animation-timing),
-                opacity 0ms var(--animation-timing);
+            @media (prefers-reduced-motion: no-preference) {
+                transition:
+                    y var(--animation-timing) ease-in,
+                    rotate var(--animation-timing) ease-in var(--animation-timing),
+                    opacity 0ms var(--animation-timing);
+            }
         }
         &[aria-expanded="true"] :is(.top, .bottom) {
             y: 2.9375rem;
